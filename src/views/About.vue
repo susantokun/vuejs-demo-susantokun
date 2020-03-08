@@ -19,7 +19,7 @@
       <div class="item">
         <i class="large eye middle aligned icon"></i>
         <div class="content">
-          <a href="https://demo.susantokun.com/" class="header"
+          <a href="https://info.susantokun.com/" class="header"
             >INFO.susantokun</a
           >
           <div class="description">Situs Khusus Informasi</div>

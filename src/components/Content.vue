@@ -41,7 +41,10 @@
                           <i class="github icon"></i>Github
                         </a>
                         <a
-                          v-bind:href="content.url_youtube"
+                          v-bind:href="
+                            'https://www.youtube.com/watch?v=' +
+                              content.url_youtube
+                          "
                           target="_blank"
                           class="item"
                         >
@@ -52,7 +55,7 @@
                           target="_blank"
                           class="item"
                         >
-                          <i class="eye icon"></i>Live content
+                          <i class="eye icon"></i>Live Demo
                         </a>
                         <a
                           v-bind:href="content.url_sc"
