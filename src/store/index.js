@@ -1,14 +1,12 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import state from "./state";
-import mutations from "./mutations";
 // import actions from "./actions";
 // import modules from "./modules";
-import Axios from "axios";
+import Axios from 'axios';
+import { createStore } from 'vuex';
 
-Vue.use(Vuex);
+import mutations from './mutations';
+import state from './state';
 
-export default new Vuex.Store({
+const store = createStore({
   state,
   mutations,
   actions: {
@@ -32,4 +30,6 @@ export default new Vuex.Store({
     }
   },
   modules: {}
-});
+})
+
+export default store;

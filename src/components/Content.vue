@@ -1,7 +1,7 @@
 <template>
   <div class="ui container">
     <div class="ui styled fluid accordion">
-      <div v-for="(categoryContent, i) in categoryContents" :key="i">
+      <template v-for="(categoryContent, i) in categoryContents" :key="i">
         <div class="title" @click="tablesort(), dropdown()">
           <i class="dropdown icon"></i>
           {{ categoryContent.name }}
@@ -79,12 +79,18 @@
             </tbody>
           </table>
         </div>
-      </div>
+      </template>
     </div>
   </div>
 </template>
 
 <script>
+import 'jquery-tablesort';
+
+import { mapState } from 'vuex';
+
+import avatar from '../assets/images/avatar.png';
+
 const $ = window.$;
 $(document).ready(function() {
   $("body").toast({
@@ -98,9 +104,6 @@ $(document).ready(function() {
   });
 });
 
-import { mapState } from "vuex";
-import avatar from "../assets/images/avatars/avatar.svg";
-import "jquery-tablesort";
 export default {
   name: "Content",
   computed: {
